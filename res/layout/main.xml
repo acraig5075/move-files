@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- 	android:id="@+id/linearLayout" -->
+<!--     android:orientation="vertical" -->
+<!--     android:layout_width="fill_parent" -->
+<!--     android:layout_height="fill_parent" -->
+<!--     > -->
+<!-- <TextView   -->
+<!-- 	android:id="@+id/src" -->
+<!--     android:layout_width="fill_parent"  -->
+<!--     android:layout_height="wrap_content"  -->
+<!--     /> -->
+<!-- <TextView   -->
+<!-- 	android:id="@+id/srccount" -->
+<!--     android:layout_width="fill_parent"  -->
+<!--     android:layout_height="wrap_content"  -->
+<!--     /> -->
+<!-- <TextView   -->
+<!-- 	android:id="@+id/dest" -->
+<!--     android:layout_width="fill_parent"  -->
+<!--     android:layout_height="wrap_content"  -->
+<!--     /> -->
+<!-- <TextView   -->
+<!-- 	android:id="@+id/destcount" -->
+<!--     android:layout_width="fill_parent"  -->
+<!--     android:layout_height="wrap_content"  -->
+<!--     /> -->
+<!-- <CheckBox -->
+<!-- 	android:id="@+id/deleteBefore"  -->
+<!-- 	android:text="Clear dest directory before the copy"  -->
+<!-- 	android:layout_width="wrap_content"  -->
+<!-- 	android:layout_height="wrap_content" -->
+<!-- 	android:checked="false" -->
+<!-- 	android:enabled="false" -->
+<!-- 	/> -->
+<!-- <CheckBox -->
+<!-- 	android:id="@+id/deleteAfter"  -->
+<!-- 	android:text="Delete src files after the copy" -->
+<!-- 	android:layout_width="wrap_content"  -->
+<!-- 	android:layout_height="wrap_content" -->
+<!-- 	android:checked="false" -->
+<!-- 	android:enabled="false" -->
+<!-- 	/> -->
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- 	android:id="@+id/linearLayout" -->
+<!--     android:orientation="horizontal" -->
+<!--     android:layout_width="fill_parent" -->
+<!--     android:layout_height="wrap_content" -->
+<!--     > -->
+<!-- 	<Button  -->
+<!-- 		android:text="Copy files" -->
+<!-- 		android:id="@+id/copyButton"  -->
+<!-- 		android:layout_width="wrap_content"  -->
+<!-- 		android:layout_height="wrap_content" -->
+<!-- 		android:enabled="false" -->
+<!-- 		android:onClick="onCopyClick" -->
+<!-- 		/> -->
+<!-- 	<Button  -->
+<!-- 		android:text="Swap Src/Dest" -->
+<!-- 		android:id="@+id/swapButton"  -->
+<!-- 		android:layout_width="wrap_content"  -->
+<!-- 		android:layout_height="wrap_content" -->
+<!-- 		android:enabled="true" -->
+<!-- 		android:onClick="onSwapClick" -->
+<!-- 		/> -->
+<!-- </LinearLayout> -->
+<!-- </LinearLayout> -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linearLayout1"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linearLayout2"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:baselineAligned="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linearLayout3"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+	<TextView  
+		android:id="@+id/src"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    />
+	<TextView  
+		android:id="@+id/srccount"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    />
+	<TextView  
+		android:id="@+id/dest"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    />
+	<TextView  
+		android:id="@+id/destcount"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    />
+</LinearLayout>
+<Button 
+	android:text="Swap"
+	android:id="@+id/swapButton" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:enabled="true"
+	android:onClick="onSwapClick"
+	android:layout_gravity="center_vertical"/>
+</LinearLayout>
+<CheckBox
+	android:id="@+id/deleteBefore" 
+	android:text="Clear dest directory before the copy" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:checked="false"
+	android:enabled="false"
+	/>
+<CheckBox
+	android:id="@+id/deleteAfter" 
+	android:text="Delete src files after the copy"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:checked="false"
+	android:enabled="false"
+	/>
+<Button 
+	android:text="Copy files"
+	android:id="@+id/copyButton" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:enabled="false"
+	android:onClick="onCopyClick"
+	android:layout_gravity="center_horizontal"
+	/>
+</LinearLayout>
