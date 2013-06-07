@@ -5,6 +5,7 @@ import java.io.File;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -24,8 +25,8 @@ public class MoveFilesActivity extends Activity
 	private File _src;
 	private File _dest;
 	private int _srcc = 0;
-	private boolean _moveMode = false;
-	private boolean _clearMode = false;
+	private boolean _moveMode = true;
+	private boolean _clearMode = true;
 	private boolean _share = false;
 
 
@@ -40,6 +41,16 @@ public class MoveFilesActivity extends Activity
 		ruler.setBackgroundColor(0xFFFFFFFF);
 		LinearLayout parent = (LinearLayout) findViewById(R.id.linearLayout1);
 		parent.addView(ruler, 1, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 1));
+		
+		try
+			{
+			PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+			setTitle("Move Files " + pInfo.versionName);
+			}
+		catch (Exception e)
+			{
+			setTitle("Move Files");
+			}
 
 		initFromPreferences();
 		updateSourceControls();
@@ -54,7 +65,7 @@ public class MoveFilesActivity extends Activity
 		
 		_src = directoryFromPreference("srcPref", "0");
 		_dest = directoryFromPreference("destPref", "2");
-		_moveMode = prefs.getBoolean("deletePref", false);
+		_moveMode = prefs.getBoolean("deletePref", true);
 		_share = prefs.getBoolean("sharePref", false);
 		}
 
@@ -130,9 +141,11 @@ public class MoveFilesActivity extends Activity
 		copyButton.setEnabled(enabled);
 
 		CheckBox deleteBeforeBox = (CheckBox) findViewById(R.id.deleteBefore);
+		deleteBeforeBox.setChecked(_clearMode);
 		deleteBeforeBox.setEnabled(enabled);
 
 		CheckBox deleteAfterBox = (CheckBox) findViewById(R.id.deleteAfter);
+		deleteAfterBox.setChecked(_moveMode);
 		deleteAfterBox.setEnabled(enabled);
 		}
 
