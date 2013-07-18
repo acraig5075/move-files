@@ -140,13 +140,13 @@ public class MoveFilesActivity extends Activity
 		Button copyButton = (Button) findViewById(R.id.copyButton);
 		copyButton.setEnabled(enabled);
 
-		CheckBox deleteBeforeBox = (CheckBox) findViewById(R.id.deleteBefore);
-		deleteBeforeBox.setChecked(_clearMode);
-		deleteBeforeBox.setEnabled(enabled);
+		CheckBox clearDestinationBox = (CheckBox) findViewById(R.id.deleteBefore);
+		clearDestinationBox.setChecked(_clearMode);
+		clearDestinationBox.setEnabled(enabled);
 
-		CheckBox deleteAfterBox = (CheckBox) findViewById(R.id.deleteAfter);
-		deleteAfterBox.setChecked(_moveMode);
-		deleteAfterBox.setEnabled(enabled);
+		CheckBox keepCopyBox = (CheckBox) findViewById(R.id.deleteAfter);
+		keepCopyBox.setChecked(!_moveMode);
+		keepCopyBox.setEnabled(enabled);
 		}
 
 
@@ -161,8 +161,8 @@ public class MoveFilesActivity extends Activity
 		CheckBox deleteBeforeBox = (CheckBox) findViewById(R.id.deleteBefore);
 		_clearMode = deleteBeforeBox.isChecked();
 
-		CheckBox deleteAfterBox = (CheckBox) findViewById(R.id.deleteAfter);
-		_moveMode = deleteAfterBox.isChecked();
+		CheckBox keepCopyBox = (CheckBox) findViewById(R.id.deleteAfter);
+		_moveMode = !keepCopyBox.isChecked();
 		
 		enableControls(false);
 		
