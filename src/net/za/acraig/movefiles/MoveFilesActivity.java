@@ -86,7 +86,7 @@ public class MoveFilesActivity extends Activity
 				File extStorage = Environment.getExternalStorageDirectory();
 				File usbHost = new File(extStorage, "usbStorage");
 				if (usbHost != null && usbHost.exists() && usbHost.isDirectory())
-					return new File(usbHost, "UsbDriveA");
+					return usbHost; // new File(usbHost, "UsbDriveA");
 				
 				break;
 				}
