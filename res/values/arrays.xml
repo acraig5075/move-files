@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="srcArray">
+        <item>@string/dirPodcasts</item>
+        <item>@string/dirDownloads</item>
+        <item>@string/dirUSBaccessory</item>
+    </string-array>
+    <string-array name="destArray">
+        <item>@string/dirPodcasts</item>
+        <item>@string/dirDownloads</item>
+        <item>@string/dirUSBaccessory</item>
+    </string-array>
+    <string-array name="srcValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="destValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
+</resources>

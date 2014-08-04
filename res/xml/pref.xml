@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="User settings">
+        <ListPreference 
+	        android:title="Source" 
+	        android:dialogTitle="Source directory" 
+	        android:entryValues="@array/srcValues" 
+	        android:entries="@array/srcArray" 
+	        android:summary="Copy files from this directory" android:key="srcPref">
+        </ListPreference>
+        <ListPreference 
+	        android:title="Destination" 
+	        android:dialogTitle="Destination directory" 
+	        android:entryValues="@array/destValues" 
+	        android:entries="@array/destArray" 
+	        android:summary="Copy files to this directory" android:key="destPref">
+        </ListPreference>
+        <CheckBoxPreference 
+	        android:summary="The original source files will be deleted (moving, not copying)" 
+	        android:title="Move" android:key="deletePref">
+        </CheckBoxPreference>
+        <CheckBoxPreference 
+	        android:summary="Copied/moved filenames may be shared to other apps" 
+	        android:title="Share" android:key="sharePref">
+        </CheckBoxPreference>
+    </PreferenceCategory>
+    
+</PreferenceScreen>

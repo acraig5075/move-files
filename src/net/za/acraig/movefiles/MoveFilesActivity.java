@@ -83,12 +83,14 @@ public class MoveFilesActivity extends Activity
 				return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
 			case 2:
 				{
-				File extStorage = Environment.getExternalStorageDirectory();
-				File usbHost = new File(extStorage, "usbStorage");
-				if (usbHost != null && usbHost.exists() && usbHost.isDirectory())
-					return new File(usbHost, "UsbDriveA");
-				
-				break;
+//				File extStorage = Environment.getExternalStorageDirectory();
+//				File usbHost = new File(extStorage, "usbStorage");
+//				if (usbHost != null && usbHost.exists() && usbHost.isDirectory())
+//					return new File(usbHost, "UsbDriveA");
+//				break;
+				File usbHost = new File("/storage/UsbDriveA");
+				if (usbHost != null && usbHost.exists() && usbHost.isDirectory() && usbHost.canWrite())
+					return usbHost;
 				}
 			}
 		return null;

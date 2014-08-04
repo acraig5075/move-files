@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MoveFilesActivity!</string>
+    <string name="app_name">Move Files</string>
+    <string name="dirPodcasts">Public Podcasts</string>
+    <string name="dirDownloads">Public Downloads</string>
+    <string name="dirUSBaccessory">USB accessory</string>
+</resources>
